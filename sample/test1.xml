@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userlist dm-perm-key="key1"
+              dm-query="query1"
+              dm-bind-str="score_type"
+              dm-bind-array="score_limit"
+              dm-query-point="">
+     <user dm-repeat="5"
+               dm-name="highscoreuser">
+         <username dm-result-handler="rh1"></username>
+         <score dm-result-handler="rh2"></score>       
+     </user>
+</userlist>
