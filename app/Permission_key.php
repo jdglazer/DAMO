@@ -90,7 +90,7 @@
 /**
  * Provides the username for the specific MySQL user registered to the object
  * 
- * @return the mysql user's username
+ * @return String the mysql user's username
  */
 		public function get_user() {
 			return $this->mysql_user;
@@ -98,7 +98,7 @@
 /*		
  * Provides the host address for the specific MySQL database
  * 
- * @return the mysql database host address
+ * @return String the mysql database host address
  */
 		public function get_host() {
 			return $this->mysql_host;
@@ -110,7 +110,7 @@
  * 
  * @param $super_user The username for the super user
  * @param $super_password The password for the super user
- * @return boolean true if the superuser connection was made, false otherwise
+ * @return bool true if the superuser connection was made, false otherwise
  */
 		private function super_linker($super_user, $super_password) {
 			$connect_success = false;
