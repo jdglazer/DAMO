@@ -25,7 +25,7 @@
  * A function that checks to see if a given DOMElement/DOMNode has child elements, 'elements' being defined as tag type nodes
  * 
  * @param $element The parent element to check for children elements
- * @return True if the DOMElement passed to argument has child tag elements, false if not
+ * @return bool True if the DOMElement passed to argument has child tag elements, false if not
  */
 		protected function XMLhasChildElement($element) {
 			
@@ -60,7 +60,7 @@
  * 
  * @param $node A DOMNode whose child nodes will be searched
  * @param $name The name of a sought after child node
- * @return True if the specified node has a child with the specified name
+ * @return bool True if the specified node has a child with the specified name
  */
 		private function hasChildWithName($node, $name) {
 			
@@ -90,7 +90,7 @@
  * A function to find the index of the last childNode that is an element (ie, a tag)
  * 
  * @param $nodelist A DOMNodeList object
- * @return An integer index associated with the last node on the DOMNodeList passed to the function
+ * @return int An integer index associated with the last node on the DOMNodeList passed to the function
  */
 		private function lastChildElement($nodelist) {
 			
@@ -112,7 +112,7 @@
  * @param $node An XML DOMNode upon which JSON model will be based
  * @param $listIdentifier A String indicating the list element identifier tag name in the XML model
  * @param $isLastChild true if the $node passed in is the last child of its parent, false otherwise
- * @return Returns a json string
+ * @return String A json string
  */
 		private function produceJSON($_JSON_, $node, $listIdentifier, $isLastChild) {
 			
@@ -179,7 +179,7 @@
  * A function that gets the value from the MySQL database that has been bound to the node, by the registered query, result handler, ect
  * 
  * @param The node for which value is drawn
- * @returns the value associated with the specified node
+ * @returns String The value associated with the specified node
  * 
  */	
 		private function getNodeQueryResult($_node) {
@@ -221,7 +221,7 @@
  * converts xml to json taking the name of the tag which is used to denote a list element (eg. parsed as [el1, el2, el3])
  * 
  * @param $NametoParseasList A string indicating the name associated with list elements in the XML model
- * @return A complete json string!
+ * @return String A complete json string!
  */		
 		public function _JSON($NametoParseasList="_li") {
 			
@@ -238,7 +238,4 @@
 		}
 	}
 	
-
 ?>
-
-
