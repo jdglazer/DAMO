@@ -58,7 +58,7 @@
  * 
  * @param $element The element for which to find the attribute value
  * @param $attr The name of the attribute whose value is being sought out
- * @return The value of the attribute in question for the provided element or for the nearest parent element that has 
+ * @return String The value of the attribute in question for the provided element or for the nearest parent element that has 
  * the specified element
  * @throws Exception For invalid argument types
  */
@@ -94,7 +94,7 @@
  * @param $query MySQL query as a String
  * @param $bind_str A String formatted to represent the types of the values to beind to the query. These should be structured as the $types argument for the bind_param function of php's mysqli_stmt object. Default argument is null string.
  * @param $bind_array An array of values to bind to the MySQL query specified in $query argument (protection against SQL injection )
- * @return False if an error occurs or a 2-dimensional array containing a representation of the results
+ * @return array|bool False if an error occurs or a 2-dimensional array containing a representation of the results
  */
  //DEVELOPER NOTE: function relies on mysqlnd being enabled. Uses mysqli, mysql_stmt objects and deprecated get_result
  //function. Need to change the structure to be forward compatible with new versions of php
@@ -236,7 +236,7 @@
  * finding elements with dm-query-point attribute present, for instance;
  * 
  * @param $attr A string value name for a specific attribute
- * @return an array of offsets in the objects nodeList array
+ * @return array Offsets in the objects nodeList array
  * @throws Exception For invalid arguments
  */
 		protected function getNodeByAttr($attr) {
@@ -265,7 +265,7 @@
  * 
  * @param $attr A String with the attribute name
  * @param $val A String with the attribute value to look for
- * @return An indexed array of offsets in array stored in nodeList propert
+ * @return array An indexed array of offsets in array stored in nodeList propert
  * @throws Exception For invalid arguments
  */
 		protected function getNodeByAttrValue($attr, $val) {
@@ -323,7 +323,7 @@
  * 
  * @param $parent_node_ The parent node where the search starts
  * @param $search_attr A String representing the attribute name by which to search
- * @return A list of DOMNodes with the specified attributes
+ * @return array A list of DOMNodes with the specified attributes
  */
 		protected function find_nodes_by_attribute_presence($parent_node_, $search_attr) {
 			
@@ -343,7 +343,7 @@
  * 
  * @param $listElementName This is the specific String tag name  associated with a list element. List elements get placed into indexed arrays in the frameworks final json output
  * @param $DMRepeatDirective A String representing the name of the attribute associated with the repeat functionality 
- * @return boolean true if the rebuild was a successful, false otherwise
+ * @return bool true if the rebuild was a successful, false otherwise
  */
 		protected function rebuildWithDMRepeat($listElementName, $DMRepeatDirective) {
 			
