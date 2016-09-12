@@ -17,7 +17,7 @@
 /**
  * A function to verify that two inputs are arrays and are the same length as eachother
  * 
- * @return boolean true if two inputs are arrays of the same length, false otherwise
+ * @return bool true if two inputs are arrays of the same length, false otherwise
  */
 		private function check_input($one, $two) {
 			if(!is_array($one) || !is_array($two)) 
