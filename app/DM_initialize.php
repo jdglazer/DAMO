@@ -129,7 +129,7 @@
  * 
  * @param $dm_name The dm-name attribute value of the node from which the extracted MySQL data is taken
  * @param $iter If the dm-name attribute was turned to a dm-class by the expansion of the model under a dm-repeat this variable specifies the index of the instance of the class of interest
- * @return The value from the database associated with the node containing the dm-name value specified in $dm_name argument
+ * @return String The value from the database associated with the node containing the dm-name value specified in $dm_name argument
  */
 		public function extract_result($dm_name, $iter="default") {
 			
